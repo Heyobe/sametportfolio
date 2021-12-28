@@ -1,0 +1,337 @@
+.footer{
+    position: relative;
+
+    &__container{
+        width: 100%;
+        max-width: 2000px;
+        margin-inline: auto;
+        height: 90vh;
+        background: $deep-main;
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        p{
+            text-align: center;
+            font-size: 16px;
+            font-family: $bitter;
+            color: $white;
+            font-weight: bold;
+
+            @include tablet{
+                font-size: 18px;
+            }
+        
+            @include tablet-xlarge{
+                font-size: 20px;
+            }
+        
+            @include laptop-m{
+                font-size: 22px;
+            }
+        
+            @include laptop-xl{
+                font-size: 24px;
+            }
+        }
+
+        h2{
+            text-align: center;
+            color: $white;
+            font-size: 2.188em;
+            font-family: $bitter;
+            font-weight: bolder;
+            margin-inline: auto;
+            max-width: 390px;
+            padding-bottom: 40px;
+            padding-top: 10px;
+
+            span{
+                color: $main-color;
+            }
+
+//////------Mobile screens///////////
+
+
+            @include mobile-m {
+                font-size: 2.375rem;
+            }
+            
+            @include mobile-l {
+                color: rgb(255, 255, 255);
+            }
+
+            @include mobile-xl {
+                font-size: 2.5rem;
+                max-width: 480000px;
+            }
+
+            //////------Tablet screens///////////
+
+
+            @include tablet{
+                text-align: left;
+                max-width: 430000px;
+                font-size: 2.625rem;
+            }
+
+            @include tablet-xl{
+                font-size: 2.813em;
+                max-width: 51000px;
+            }
+
+            @include tablet-xxl{
+                font-size: 3.125em;
+                max-width: 56000px;
+            }
+
+            @include tablet-xxxl{
+                font-size: 3.3em;
+                max-width: 560000px;
+            }
+
+            @include tablet-large{
+                font-size: 3.5em;
+                max-width: 60000px;
+            }
+
+            @include tablet-xlarge{
+                max-width: 60000px;
+                font-size: 4em;
+            }
+
+            //////------Laptop screens///////////
+
+            @include laptop-s{
+                max-width: 700000px;
+                font-size: 4em;
+            }
+
+            @include laptop-ss{
+                max-width: 72000px;
+                font-size: 4em;
+            }
+
+            @include laptop-m{
+                max-width: 72000px;
+                font-size: 5em;
+            }
+
+            @include laptop-l{
+                max-width: 79000px;
+                font-size: 5em;
+            }
+
+            @include laptop-xl{
+                max-width: 79000px;
+                font-size: 7em;
+            }
+
+
+            @include mobile-s {
+                font-size: 2.05rem;
+            }
+        }
+
+        .cta-footer{
+            display: flex;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+            overflow: hidden;
+            width: 100%;
+
+            .cta-footer1{
+                color: $white;
+                font-size: 14px;
+                font-family: $open-sans;
+                letter-spacing: 3px;
+                text-align: center;
+                border: 1px solid $lightblack;
+                background: $lightblack;
+                padding: 15px 0;
+                width: 100%;
+                transition: all .6s ease-in-out;
+                position: relative;
+                margin-bottom: 20px;
+
+                img{
+                    width: 16px;
+                    filter: invert(6%) sepia(7%) saturate(11%) hue-rotate(333deg) brightness(98%) contrast(88%);
+                    right: 5px;
+                    top: 5px;
+                    position: absolute;
+                    transform: rotate(180deg);
+                    opacity: 0;
+                    transition: all .6s ease-in-out;
+                }
+
+                &:hover{
+                    background: $button-main;
+                    border: 1px solid $button-main;
+                    padding-left: 30px;
+                    padding-right: 50px;
+                    color: $lightblack;
+
+                    img{
+                        opacity: 1;
+                        transform: rotate(225deg);
+                    }
+                }
+            }
+
+            .cta-footer2{
+                color: $lightblack;
+                font-size: 14px;
+                font-family: $open-sans;
+                letter-spacing: 3px;
+                text-align: center;
+                border: 2px solid $lightblack;
+                padding: 13px 0;
+                width: 100%;
+                transition: all .6s ease-in-out;
+                position: relative;
+                overflow: hidden;
+
+                img{
+                    width: 16px;
+                    filter: invert(8%) sepia(10%) saturate(23%) hue-rotate(339deg) brightness(97%) contrast(92%);                        position: absolute;
+                    right: 5px;
+                    top: 5px;
+                    transform: rotate(180deg);
+                    opacity: 0;
+                    transition: all .6s ease-in-out;
+                }
+
+                &:hover{
+                    border: 1px solid $button-main;
+                    color: $lightblack;
+                    padding-left: 30px;
+                    padding-right: 50px;
+
+                    img{
+                        opacity: 1;
+                        transform: rotate(225deg);
+                    }
+                }
+                
+
+                &::before{
+                    content: "";
+                    z-index: -1;
+                    position: absolute;
+                    width: 250px;
+                    height: 200px;
+                    top: -200%;
+                    left: -270px;
+                    transform: rotate(20deg);
+                    background-color: $button-main;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+
+                }
+
+                &:hover::before{
+                    left: -20px;
+                }
+            }
+
+            @include tablet{
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+
+                .cta-footer1{
+                    max-width: 300px;
+                    margin-bottom: 0;
+                    padding: 15px 40px;
+                }
+                .cta-footer2{
+                    max-width: 300px;
+                    margin-left: 15px;
+                    
+                }
+            }
+
+        }
+
+        .logo__footer{
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+            img{
+                width: 160px;
+            }
+
+            @include tablet{
+                bottom: 40px;
+                img{
+                    width: 200px;
+                }
+            }
+        }
+
+        .footer_line{
+            height: 2px;
+            width: 100vw;
+            position: absolute;
+            bottom: 25px;
+            background: $white;
+            opacity: .5;
+
+            @include tablet{
+                bottom: 38px;
+            }
+        }
+        
+    }
+
+
+    .contact-label{
+        color: rgba(255, 255, 255, 0.027);
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 70px;
+        font-weight: bold;
+        font-family: $open-sans;
+        z-index: -1;
+
+        @include mobile-xl{
+            font-size: 100px;
+            top: -75px;
+        }
+
+        @include tablet{
+            font-size: 130px;
+            top: -100px;
+        }
+
+        @include tablet-xxl{
+            font-size: 160px;
+            top: -130px;
+        }
+
+        @include tablet-xlarge{
+            font-size: 200px;
+            top: -155px;
+        }
+        @include laptop-s{
+            font-size: 240px;
+            top: -185px;
+        }
+        @include mobile-s{
+            font-size: 60px;
+        }
+
+    }
+    
+}

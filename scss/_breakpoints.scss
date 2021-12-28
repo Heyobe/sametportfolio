@@ -1,0 +1,145 @@
+$breakpoints: (
+    "mobile-s": 336px,
+    "mobile-m": 375px,
+    "mobile-l": 425px,
+    "mobile-xl": 525px,
+    "mobile-xl-boarder": 549px,
+    "mobile-xl-portfolio": 550px,
+
+//////------Tablet screens///////////
+
+
+    "tablet-about": 601px,
+    "tablet": 680px,
+    "tablet-xl": 768px,
+    "tablet-xxl": 840px,
+    "tablet-xxxl": 900px,
+    "tablet-large": 950px,
+    "tablet-xlarge": 1000px,
+
+//////------Laptop screens///////////
+
+    "laptop-s": 1266px,
+    "laptop-ss": 1290px,
+    "laptop-m": 1320px,
+    "laptop-l": 1360px,
+    "laptop-xl": 1460px,
+);
+
+
+
+//////------Mobile screens///////////
+
+
+@mixin mobile-s {
+    @media (max-width: map-get($breakpoints , "mobile-s" )) {
+        @content;
+    }
+}
+
+@mixin mobile-m {
+    @media (min-width: map-get($breakpoints , "mobile-m" )) {
+        @content;
+    }
+}
+
+@mixin mobile-l {
+    @media (min-width: map-get($breakpoints , "mobile-l" )) {
+        @content;
+    }
+}
+
+@mixin mobile-xl {
+    @media (min-width: map-get($breakpoints , "mobile-xl" )) {
+        @content;
+    }
+}
+@mixin mobile-xl-portfolio {
+    @media (min-width: map-get($breakpoints , "mobile-xl-portfolio" )) {
+        @content;
+    }
+}
+@mixin mobile-xl-boarder {
+    @media (max-width: map-get($breakpoints , "mobile-xl-boarder" )) {
+        @content;
+    }
+}
+
+
+//////------Tablet screens///////////
+
+
+
+@mixin tablet-about {
+    @media (min-width: map-get($breakpoints , "tablet-about" )) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: map-get($breakpoints , "tablet" )) {
+        @content;
+    }
+}
+
+@mixin tablet-xl {
+    @media (min-width: map-get($breakpoints , "tablet-xl" )) {
+        @content;
+    }
+}
+
+@mixin tablet-xxl {
+    @media (min-width: map-get($breakpoints , "tablet-xxl" )) {
+        @content;
+    }
+}
+
+@mixin tablet-xxxl {
+    @media (min-width: map-get($breakpoints , "tablet-xxxl" )) {
+        @content;
+    }
+}
+
+@mixin tablet-large {
+    @media (min-width: map-get($breakpoints , "tablet-large" )) {
+        @content;
+    }
+}
+
+@mixin tablet-xlarge {
+    @media (min-width: map-get($breakpoints , "tablet-xlarge" )) {
+        @content;
+    }
+}
+
+//////------Laptop screens///////////
+
+@mixin laptop-s {
+    @media (min-width: map-get($breakpoints , "laptop-s" )) {
+        @content;
+    }
+}
+
+@mixin laptop-ss {
+    @media (min-width: map-get($breakpoints , "laptop-ss" )) {
+        @content;
+    }
+}
+
+@mixin laptop-m {
+    @media (min-width: map-get($breakpoints , "laptop-m" )) {
+        @content;
+    }
+}
+
+@mixin laptop-l {
+    @media (min-width: map-get($breakpoints , "laptop-l" )) {
+        @content;
+    }
+}
+
+@mixin laptop-xl {
+    @media (min-width: map-get($breakpoints , "laptop-xl" )) {
+        @content;
+    }
+}

@@ -1,0 +1,166 @@
+header{
+    max-width: 1920px;
+    margin: auto;
+    height: 46px;
+
+    @include tablet-xlarge{
+        height: 56px;
+    }
+    
+    .nav-bar{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 46px;
+        padding: 0 20px;
+        z-index: 100;
+        background-color: #148d7b00;
+
+        @include tablet-large{
+            padding: 0 40px;
+            height: 56px;
+        }
+
+        @include tablet-xlarge{
+            padding: 0 40px;
+            height: 56px;
+        }
+
+        .logo{
+            img{
+                width: 160px;
+
+                @include tablet-large{
+                    width: 200px;
+                }
+            }
+        }
+
+        .nav-links{
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: $lightblack;
+            z-index: 10;
+            top: -100vh;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: 1s;
+            position: fixed;
+
+            .menu-label{
+                position: absolute;
+                writing-mode: vertical-lr;
+                font-size: 10em;
+                font-family: 'Open Sans', sans-serif;
+                color: #9A9A9A;
+                left: -10%;
+                opacity: 0.05;
+
+                @include tablet-xlarge{
+                    font-size: 19em;
+                    left: -0px;
+                    writing-mode: horizontal-tb;
+                    left: auto;
+                    top: 20vh;
+                    letter-spacing: 30px;
+                    opacity: 0.03;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: $main-color;
+                }
+            }
+
+            ul{
+                li{
+                    &:not(:last-child){
+                        margin-bottom: 40px;
+                    }
+                    margin-left: -1000px;
+                    a{
+                    font-size: 2.5em;
+                    font-weight: 800;
+                    font-family: 'Open Sans', sans-serif;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: $main-color;
+                    color: rgba(255, 255, 255, 0);
+                    padding: 10px;
+                    letter-spacing: 5px;
+                    position: relative;
+                    transition: .4s;
+                    
+                    @include tablet-xlarge{
+                        font-size: 65px;
+                    }
+
+                        &:hover{
+                            color: $main-color;
+                            transition: .4s;
+
+                            &::after{
+                                width: 30%;
+                                transition: 1s ease-in-out;
+                            }
+                        }
+
+                        &::after{
+                            content: '';
+                            height: 2px;
+                            width: 100%;
+                            background: $main-color;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            transition: 1s;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .close-icon{
+            filter: invert(100%) sepia(0%) saturate(11%) hue-rotate(233deg) brightness(104%) contrast(102%);
+            width: 22px;
+            position: absolute;
+            right: 25px;
+            top: -50px;
+            opacity: .4;
+            transition: .5s ease-in;
+            
+            @include tablet-xlarge{
+                top: -50px;
+                right: 45px;
+                width: 30px;
+
+                &:hover{
+                    opacity: .8 !important;
+                }    
+            }
+         }
+
+        .menu-icon{
+            filter: invert(100%) sepia(0%) saturate(11%) hue-rotate(233deg) brightness(104%) contrast(102%);
+            width: 32.66px;
+            transition: .6s;
+
+            @include tablet-large{
+                width: 42px;
+            }
+        }
+
+    }
+
+    .sticky{
+        position: fixed;
+    }
+
+    .bg_color{
+        background: #148d7b00;
+    }
+
+
+}

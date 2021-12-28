@@ -1,0 +1,143 @@
+.portfolio-work{
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    max-width: 2000px;
+    margin-inline: auto;
+    margin-bottom: 80px;
+
+    .project-item{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .image{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+                transition: .5s ease-in-out;
+                opacity: .4;
+            }
+
+        }
+
+        span{
+            opacity: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #148d7b7e;
+            border-radius: 50%;
+            position: absolute;
+            color: $white;
+            font-size: 10px;
+            font-family: $bitter;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            z-index: 4;
+            transition: .5s ease-in-out;
+        }
+
+
+        &:hover{
+            img{
+                opacity: 1;
+                transform: scale(1.2);
+            }
+
+            span{
+                opacity: 1;
+                width: 100px;
+                height: 100px;
+                font-size: 18px;
+            }
+        }
+    }
+
+
+    @include mobile-xl-portfolio{
+        grid-template-columns: repeat(2, 1fr);
+    
+        .boarder-all{
+            border: 1px solid $deep-main;
+            border-bottom: none;
+            border-left: none;
+        }
+
+    }
+
+
+    @include tablet{
+        grid-template-columns: repeat(3, 1fr);
+
+        .boader-tr{
+            border-top: 1px solid $deep-main ;
+            border-right: 1px solid $deep-main ;
+        }
+        .boader-t{
+            border-top: 1px solid $deep-main ;
+        }
+        .boader-tl{
+            border-top: 1px solid $deep-main ;
+            border-left: 1px solid $deep-main ;
+        }
+        .boader-trb{
+            border-top: 1px solid $deep-main ;
+            border-right: 1px solid $deep-main ;
+            border-bottom: 1px solid $deep-main ;
+        }
+        .boader-tb{
+            border-top: 1px solid $deep-main ;
+            border-bottom: 1px solid $deep-main ;
+        }
+        .boader-tlb{
+            border-top: 1px solid $deep-main ;
+            border-left: 1px solid $deep-main ;
+            border-bottom: 1px solid $deep-main ;
+        }
+
+
+        .project-item{
+
+            .image{    
+                img{
+                    opacity: .4;
+                    transition: .5s ease-in-out;
+                }
+            }
+
+
+            &:hover{
+                img{
+                    opacity: 1;
+                    transform: scale(1.2);
+                }
+
+                span{
+                    width: 150px;
+                    height: 150px;
+                    font-size: 24px;
+                }
+            }
+        }    
+
+    }
+
+    @include mobile-xl-boarder{
+        .boarder-all{
+            border: 1px solid $deep-main;
+            border-bottom: none;
+        }
+    }
+}

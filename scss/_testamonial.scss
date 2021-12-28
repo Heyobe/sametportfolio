@@ -1,0 +1,280 @@
+.testimonial{
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 150px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-width: 2000px;
+    margin-inline: auto;
+
+    .bg-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+
+        img{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            opacity: .05;
+            filter: grayscale(80%);
+
+        }
+
+        p{
+            text-align: center;
+            padding-top: 100px;
+            font-size: 12px;
+            font-family: $bitter;
+            color: $deep-main;
+            font-weight: bold;
+
+            @include tablet{
+                font-size: 16px;
+            }
+        
+            @include tablet-xlarge{
+                font-size: 18px;
+                padding-top: 150px;
+            }
+        
+            @include laptop-m{
+                font-size: 18px;
+                padding-top: 170px;
+            }
+        
+            @include laptop-xl{
+                font-size: 18px;
+                padding-top: 230px;
+            }
+        }
+
+
+    }
+
+    .glider-contain{
+        margin-top: 50px;
+        align-items: center;
+
+        .glider-prev{
+            margin-left: 27px;
+            margin-top: 10%;
+            width: 20px;
+            height: 80px;
+            background-color: $deeper-main2;
+        }
+        .glider-next{
+            margin-right: 27px;
+            margin-top: 10%;
+            width: 20px;
+            height: 80px;
+            background-color: $deeper-main2;
+        }
+        .glider{
+            padding-top: 150px;
+            padding-bottom: 50px;
+            figure{
+                width: 100%;
+                .content{
+                    color: $white;
+                    padding: 15px;
+                    border: 1px solid $deep-main;
+                    position: relative;
+                    width: 80%;
+                    max-width: 500px;
+                    margin-inline: auto;
+
+                    img{
+                        width: 180px;
+                        position: absolute;
+                        filter: grayscale(100%);
+                        transition: .5s ease-in-out;
+    
+                        &:hover{
+                            filter: grayscale(0);
+                        }
+    
+                    }
+                    
+                    .img1{
+                        left: 50%;
+                        top: -55%;
+                        transform: translateX(-50%);
+                    }
+                    .img2{
+                        left: 50%;
+                        top: -55%;
+                        transform: translateX(-50%);
+                    }
+                    .img3{
+                        left: 50%;
+                        top: -55%;
+                        transform: translateX(-50%);
+                    }
+
+
+                    .quote{
+                        display: none;
+                        position: absolute;
+                        font-size: 200px;
+                        font-family: g;
+                        top: -70px;
+                        right: 20px;
+                    }
+
+                    .quote_head{
+                        margin-bottom: 10px;
+                        font-size: 16px;
+                        font-weight: bold;
+
+                        @include tablet{
+                            font-size: 16px;
+                            color: rgb(255, 255, 255);
+                        }
+                    
+                        @include tablet-xlarge{
+                            font-size: 18px;
+                            margin-bottom: 20px;
+                            color: rgb(255, 255, 255);
+                        }
+                    
+                        @include laptop-s{
+                            font-size: 20px;
+                        }
+                    
+                        @include laptop-m{
+                            font-size: 20px;
+                        }
+                    
+                        @include laptop-xl{
+                            font-size: 24px;
+                        }
+                    }
+
+                    blockquote{
+                        font-size: 14px;
+                        font-family: $open-sans;
+                        line-height: 18px;
+                        margin-bottom: 20px;
+
+                        @include tablet{
+                            font-size: 16px;
+                            color: rgb(255, 255, 255);
+                            line-height: 25px;
+                        }
+                    
+                        @include tablet-xlarge{
+                            font-size: 16px;
+                            margin-bottom: 40px;
+                            margin-top: 10px;
+                            color: rgb(255, 255, 255);
+                        }
+                    
+                        @include laptop-s{
+                            font-size: 16px;
+                        }
+                    
+                        @include laptop-m{
+                            font-size: 16px;
+                        }
+                    
+                        @include laptop-xl{
+                            font-size: 18px;
+                        }
+                    }
+
+                    figcaption{
+                        font-family: $open-sans;
+                        font-weight: 12px;
+                        font-weight: bold;
+                    }
+                    .figcap__job{
+                        font-family: $bitter;
+                        font-weight: 8px;
+                        font-size: 400;
+                        opacity: .6;
+                    }
+
+                    @include tablet{
+                        padding-left: 150px;
+                    }
+                
+                    @include tablet-xlarge{
+                        max-width: 600px;
+                    }
+                
+                    @include laptop-s{
+                        max-width: 600px;
+                    }
+                
+                    @include laptop-m{
+                        max-width: 600px;
+                    }
+                
+                    @include laptop-xl{
+                        max-width: 700px;
+                    }
+                   
+                }
+
+                .content1, .content2, .content3{
+                    padding-top: 70px;
+                }
+
+
+                @include tablet{
+                    margin-left: 50px;
+                    .content{
+                        img{
+                            width: 200px;
+                        }
+    
+                        .img1{
+                            left: 30px;
+                            top: -50px;
+                            height: 240px;
+                        }
+                        .img2{
+                            top: 90px;
+                            left: 20px;
+                        }
+                        .img3{
+                            top: 15px;
+                            left: 20px;
+                        }
+    
+                    }
+
+                    .content1, .content2, .content3{
+                        padding-top: 30px;
+                    }
+                }
+            }
+
+            @include tablet-xlarge{
+                padding-bottom: 100px;
+            }
+        }
+    }
+
+    @include tablet{
+        margin-bottom: 170px;
+    }
+
+    @include tablet-xxl{
+        margin-bottom: 180px;
+    }
+
+    @include tablet-xlarge{
+        margin-bottom: 200px;
+    }
+    @include laptop-s{
+        margin-bottom: 220px;
+    }
+    @include laptop-xl{
+        margin-bottom: 300px;
+    }
+
+}
